@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C0FE0952374378E00A11BFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FE0942374378E00A11BFE /* AppDelegate.swift */; };
-		6C0FE0972374378E00A11BFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FE0962374378E00A11BFE /* SceneDelegate.swift */; };
-		6C0FE0992374378E00A11BFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0FE0982374378E00A11BFE /* ViewController.swift */; };
-		6C0FE09C2374378E00A11BFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FE09A2374378E00A11BFE /* Main.storyboard */; };
-		6C0FE09E2374379000A11BFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FE09D2374379000A11BFE /* Assets.xcassets */; };
-		6C0FE0A12374379000A11BFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FE09F2374379000A11BFE /* LaunchScreen.storyboard */; };
+		A4898010228F49E700852716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489800F228F49E700852716 /* AppDelegate.swift */; };
+		A4898012228F49E700852716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4898011228F49E700852716 /* ViewController.swift */; };
+		A4898015228F49E700852716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898013228F49E700852716 /* Main.storyboard */; };
+		A4898017228F49E800852716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4898016228F49E800852716 /* Assets.xcassets */; };
+		A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898018228F49E800852716 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6C0FE0912374378E00A11BFE /* WirelessProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WirelessProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C0FE0942374378E00A11BFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6C0FE0962374378E00A11BFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C0FE0982374378E00A11BFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6C0FE09B2374378E00A11BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6C0FE09D2374379000A11BFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6C0FE0A02374379000A11BFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6C0FE0A22374379000A11BFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A489800C228F49E700852716 /* wireless_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wireless_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A489800F228F49E700852716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4898011228F49E700852716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4898014228F49E700852716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4898016228F49E800852716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4898019228F49E800852716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A489801B228F49E800852716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6C0FE08E2374378E00A11BFE /* Frameworks */ = {
+		A4898009228F49E700852716 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6C0FE0882374378E00A11BFE = {
+		A4898003228F49E700852716 = {
 			isa = PBXGroup;
 			children = (
-				6C0FE0932374378E00A11BFE /* WirelessProject */,
-				6C0FE0922374378E00A11BFE /* Products */,
+				A489800E228F49E700852716 /* IOSMultipeerConnectivityTutorial */,
+				A489800D228F49E700852716 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6C0FE0922374378E00A11BFE /* Products */ = {
+		A489800D228F49E700852716 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C0FE0912374378E00A11BFE /* WirelessProject.app */,
+				A489800C228F49E700852716 /* wireless_project.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6C0FE0932374378E00A11BFE /* WirelessProject */ = {
+		A489800E228F49E700852716 /* IOSMultipeerConnectivityTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				6C0FE0942374378E00A11BFE /* AppDelegate.swift */,
-				6C0FE0962374378E00A11BFE /* SceneDelegate.swift */,
-				6C0FE0982374378E00A11BFE /* ViewController.swift */,
-				6C0FE09A2374378E00A11BFE /* Main.storyboard */,
-				6C0FE09D2374379000A11BFE /* Assets.xcassets */,
-				6C0FE09F2374379000A11BFE /* LaunchScreen.storyboard */,
-				6C0FE0A22374379000A11BFE /* Info.plist */,
+				A489800F228F49E700852716 /* AppDelegate.swift */,
+				A4898011228F49E700852716 /* ViewController.swift */,
+				A4898013228F49E700852716 /* Main.storyboard */,
+				A4898016228F49E800852716 /* Assets.xcassets */,
+				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
+				A489801B228F49E800852716 /* Info.plist */,
 			);
-			path = WirelessProject;
+			path = IOSMultipeerConnectivityTutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6C0FE0902374378E00A11BFE /* WirelessProject */ = {
+		A489800B228F49E700852716 /* IOSMultipeerConnectivityTutorial */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C0FE0A52374379000A11BFE /* Build configuration list for PBXNativeTarget "WirelessProject" */;
+			buildConfigurationList = A489801E228F49E800852716 /* Build configuration list for PBXNativeTarget "IOSMultipeerConnectivityTutorial" */;
 			buildPhases = (
-				6C0FE08D2374378E00A11BFE /* Sources */,
-				6C0FE08E2374378E00A11BFE /* Frameworks */,
-				6C0FE08F2374378E00A11BFE /* Resources */,
+				A4898008228F49E700852716 /* Sources */,
+				A4898009228F49E700852716 /* Frameworks */,
+				A489800A228F49E700852716 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WirelessProject;
-			productName = WirelessProject;
-			productReference = 6C0FE0912374378E00A11BFE /* WirelessProject.app */;
+			name = IOSMultipeerConnectivityTutorial;
+			productName = IOSMultipeerConnectivityTutorial;
+			productReference = A489800C228F49E700852716 /* wireless_project.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6C0FE0892374378E00A11BFE /* Project object */ = {
+		A4898004228F49E700852716 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
-				ORGANIZATIONNAME = wireless_project;
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Arthur Knopper";
 				TargetAttributes = {
-					6C0FE0902374378E00A11BFE = {
-						CreatedOnToolsVersion = 11.1;
+					A489800B228F49E700852716 = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 6C0FE08C2374378E00A11BFE /* Build configuration list for PBXProject "WirelessProject" */;
+			buildConfigurationList = A4898007228F49E700852716 /* Build configuration list for PBXProject "IOSMultipeerConnectivityTutorial" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 6C0FE0882374378E00A11BFE;
-			productRefGroup = 6C0FE0922374378E00A11BFE /* Products */;
+			mainGroup = A4898003228F49E700852716;
+			productRefGroup = A489800D228F49E700852716 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6C0FE0902374378E00A11BFE /* WirelessProject */,
+				A489800B228F49E700852716 /* IOSMultipeerConnectivityTutorial */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6C0FE08F2374378E00A11BFE /* Resources */ = {
+		A489800A228F49E700852716 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C0FE0A12374379000A11BFE /* LaunchScreen.storyboard in Resources */,
-				6C0FE09E2374379000A11BFE /* Assets.xcassets in Resources */,
-				6C0FE09C2374378E00A11BFE /* Main.storyboard in Resources */,
+				A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */,
+				A4898017228F49E800852716 /* Assets.xcassets in Resources */,
+				A4898015228F49E700852716 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6C0FE08D2374378E00A11BFE /* Sources */ = {
+		A4898008228F49E700852716 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C0FE0992374378E00A11BFE /* ViewController.swift in Sources */,
-				6C0FE0952374378E00A11BFE /* AppDelegate.swift in Sources */,
-				6C0FE0972374378E00A11BFE /* SceneDelegate.swift in Sources */,
+				A4898012228F49E700852716 /* ViewController.swift in Sources */,
+				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6C0FE09A2374378E00A11BFE /* Main.storyboard */ = {
+		A4898013228F49E700852716 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6C0FE09B2374378E00A11BFE /* Base */,
+				A4898014228F49E700852716 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6C0FE09F2374379000A11BFE /* LaunchScreen.storyboard */ = {
+		A4898018228F49E800852716 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6C0FE0A02374379000A11BFE /* Base */,
+				A4898019228F49E800852716 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6C0FE0A32374379000A11BFE /* Debug */ = {
+		A489801C228F49E800852716 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,6 +194,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -216,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -226,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		6C0FE0A42374379000A11BFE /* Release */ = {
+		A489801D228F49E800852716 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,6 +255,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -270,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,37 +278,37 @@
 			};
 			name = Release;
 		};
-		6C0FE0A62374379000A11BFE /* Debug */ = {
+		A489801F228F49E800852716 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4D8NWK56E9;
-				INFOPLIST_FILE = WirelessProject/Info.plist;
+				INFOPLIST_FILE = IOSMultipeerConnectivityTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "wireless-project.WirelessProject";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wireless.project;
+				PRODUCT_NAME = wireless_project;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6C0FE0A72374379000A11BFE /* Release */ = {
+		A4898020228F49E800852716 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4D8NWK56E9;
-				INFOPLIST_FILE = WirelessProject/Info.plist;
+				INFOPLIST_FILE = IOSMultipeerConnectivityTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "wireless-project.WirelessProject";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wireless.project;
+				PRODUCT_NAME = wireless_project;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6C0FE08C2374378E00A11BFE /* Build configuration list for PBXProject "WirelessProject" */ = {
+		A4898007228F49E700852716 /* Build configuration list for PBXProject "IOSMultipeerConnectivityTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C0FE0A32374379000A11BFE /* Debug */,
-				6C0FE0A42374379000A11BFE /* Release */,
+				A489801C228F49E800852716 /* Debug */,
+				A489801D228F49E800852716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C0FE0A52374379000A11BFE /* Build configuration list for PBXNativeTarget "WirelessProject" */ = {
+		A489801E228F49E800852716 /* Build configuration list for PBXNativeTarget "IOSMultipeerConnectivityTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6C0FE0A62374379000A11BFE /* Debug */,
-				6C0FE0A72374379000A11BFE /* Release */,
+				A489801F228F49E800852716 /* Debug */,
+				A4898020228F49E800852716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6C0FE0892374378E00A11BFE /* Project object */;
+	rootObject = A4898004228F49E700852716 /* Project object */;
 }
