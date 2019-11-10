@@ -9,14 +9,6 @@
 import UIKit
 import MultipeerConnectivity
 
-struct Message {
-    var sender : String
-    var receiver : String
-    var timestamp : Int64
-    var data : String
-    
-}
-
 
 class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControllerDelegate {
     @IBOutlet weak var chatView: UITextView!
@@ -25,19 +17,44 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     @IBOutlet weak var inputChatUid: UITextField!
     
     var username : String = ""
-
+    var tmp : Int = 0
+    
+    
+    var ts: Int64 = 0
+    var peerID: MCPeerID!
+    var uid: String = "simul"
+    var currentChatUID: String = "ipad"
+    var mcSession: MCSession!
+    var mcAdvertiserAssistant: MCAdvertiserAssistant!
+    var messageToSend: String!
+    var messagesBox: MessageBox = MessageBox()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.messagesBox[self.uid] = []
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showConnectionMenu))
         
         print(self.username)
-        self.inputUid.text = self.username
+        
         
         self.setupAdhoc()
+        self.setupChat()
+        print("load in to main chat")
+       
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        print("save")
+        print(self.saveChat())
+    }
+    
+    func setupChat(){
+        self.inputUid.text = self.username
+        print("last chat", self.loadChat())
+        updateTextView()
+    }
+   
     func setupAdhoc(){
         //Adhoc part
         peerID = MCPeerID(displayName: UIDevice.current.name)
@@ -46,11 +63,33 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
     }
     
+    func testSendMsg(){
+        let newMessage = Message(sender: self.uid, receiver: self.currentChatUID, timestamp: self.ts, data: inputMessage.text!)
+        
+        self.messagesBox.appendMsg(idx: currentChatUID, data: newMessage)
+        
+        self.updateTextView()
+        inputMessage.text = ""
+        self.ts += 1
+        
+        
+    }
     
     @IBAction func tapSendButton(_ sender: Any) {
         if inputMessage.text! == "" {
             return
         }
+        
+        self.chatView.text = self.chatView.text + self.inputMessage.text! + "\n"
+        
+       
+        // Setup UID
+        self.uid = inputUid.text!
+        self.currentChatUID = inputChatUid.text!
+        print(self.uid, self.currentChatUID)
+        
+        self.testSendMsg()
+        
         
         messageToSend = "\(self.uid):\(self.currentChatUID):\(self.ts):\(inputMessage.text!)"
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
@@ -58,12 +97,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         do {
             try self.mcSession.send(message!, toPeers: self.mcSession.connectedPeers, with: .unreliable)
             let newMessage = Message(sender: self.uid, receiver: self.currentChatUID, timestamp: self.ts, data: inputMessage.text!)
-            if self.messagesBox[self.currentChatUID] == nil{
-                self.messagesBox[self.currentChatUID] = []
-            }
             
-            self.messagesBox[self.currentChatUID]!.append(newMessage)
-            
+            self.messagesBox.appendMsg(idx: self.currentChatUID, data: newMessage)
             
             self.updateTextView()
             inputMessage.text = ""
@@ -75,14 +110,6 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         }
     }
     
-    var ts: Int64 = 0
-    var peerID: MCPeerID!
-    var uid: String = "simul"
-    var currentChatUID: String = "ipad"
-    var mcSession: MCSession!
-    var mcAdvertiserAssistant: MCAdvertiserAssistant!
-    var messageToSend: String!
-    var messagesBox: [String: [Message]] = [:]
     
     
     
@@ -159,8 +186,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     func updateTextView(){
         var text = ""
-        let sentMessages: [Message] = self.messagesBox[self.currentChatUID] ?? []
-        let receivedMessages: [Message] = self.messagesBox[self.uid] ?? []
+        let sentMessages: [Message] = self.messagesBox.box[self.currentChatUID] ?? []
+        let receivedMessages: [Message] = self.messagesBox.box[self.uid] ?? []
         let messages : [Message] = (sentMessages + receivedMessages).sorted {  $0.timestamp < $1.timestamp }
         
         for message:Message in messages {
@@ -174,7 +201,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     
     func syncMessages(){
-        for (_, messages) in self.messagesBox{
+        for (_, messages) in self.messagesBox.box{
             for message in messages{
                 do {
                     let messageToSend = "\(message.sender):\(message.receiver):\(message.timestamp):\(message.data)"
@@ -203,20 +230,48 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         let newMessage = Message(sender: sender, receiver: receiver,  timestamp: ts, data: data)
         
-        if self.messagesBox[receiver] == nil{
-            self.messagesBox[receiver] = []
-        }
-        
         var check = true
         
-        for message in self.messagesBox[receiver]!{
+        for message in self.messagesBox.box[receiver]!{
             if message.data == newMessage.data && message.timestamp == newMessage.timestamp {
                 check = false
             }
         }
         if check{
-            self.messagesBox[receiver]!.append(newMessage)
+            self.messagesBox.appendMsg(idx: receiver, data: newMessage)
         }
     }
+    
+    
+    
+    
+    func saveChat() {
+        print("save msg")
+//        var msgBox : NSDictionary = messagesBox as NSDictionary
+//        UserDefaults.standard.set(msgBox, forKey: "messageBox")
+        
+        let dictionary = self.messagesBox.getReadyToSave() //getready to sent.
+
+        // Save to User Defaults
+        UserDefaults.standard.set(dictionary, forKey: "msg")
+
+        // Read from User Defaults
+        _ = UserDefaults.standard.value(forKey: "msg") as? [String: [String]]
+        
+    }
+
+    
+    func loadChat() -> Int{
+        print("load msg")
+        if UserDefaults.standard.dictionary(forKey: "msg") != nil {
+            let loadedMsg = UserDefaults.standard.dictionary(forKey: "msg") as! [String : [String]]
+            self.messagesBox.loadFromNS(loadedMsg: loadedMsg)
+        }
+        else{
+            self.messagesBox = MessageBox()
+        }
+        return self.messagesBox.box.count
+    }
 }
+
 

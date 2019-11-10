@@ -101,21 +101,21 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wIG-2x-NzZ" firstAttribute="top" secondItem="Z2S-Q4-OhE" secondAttribute="bottom" constant="21" id="4SE-Lw-EYf"/>
-                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="A5y-sc-dkH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oxL-Y1-eJf" secondAttribute="bottom" constant="3" id="BUv-4V-WaS"/>
-                            <constraint firstItem="Pfh-fI-odE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dit-En-lqi"/>
-                            <constraint firstItem="NLJ-bN-JF7" firstAttribute="trailing" secondItem="wIG-2x-NzZ" secondAttribute="trailing" id="DtO-1p-lSJ"/>
-                            <constraint firstItem="NLJ-bN-JF7" firstAttribute="leading" secondItem="wIG-2x-NzZ" secondAttribute="leading" id="ICk-2g-gls"/>
-                            <constraint firstItem="Pfh-fI-odE" firstAttribute="top" secondItem="NLJ-bN-JF7" secondAttribute="bottom" constant="42" id="KKu-Gj-avw"/>
-                            <constraint firstItem="NLJ-bN-JF7" firstAttribute="centerX" secondItem="Pfh-fI-odE" secondAttribute="centerX" id="Svm-UW-1uk"/>
-                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UQe-hD-R88"/>
-                            <constraint firstItem="NLJ-bN-JF7" firstAttribute="top" secondItem="wIG-2x-NzZ" secondAttribute="bottom" constant="30" id="V61-Li-SGA"/>
-                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="X2n-lG-nF4"/>
-                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="trailing" secondItem="wIG-2x-NzZ" secondAttribute="trailing" id="XLu-6G-4sw"/>
-                            <constraint firstItem="Pfh-fI-odE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sSP-ZM-YDk"/>
-                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="leading" secondItem="wIG-2x-NzZ" secondAttribute="leading" id="vxZ-Bx-NV1"/>
-                            <constraint firstItem="Pfh-fI-odE" firstAttribute="centerX" secondItem="oxL-Y1-eJf" secondAttribute="centerX" constant="-153.5" id="zdK-3g-8qA"/>
+                            <constraint firstItem="NLJ-bN-JF7" firstAttribute="top" secondItem="wIG-2x-NzZ" secondAttribute="bottom" constant="30" id="1a3-Sm-mgL"/>
+                            <constraint firstItem="wIG-2x-NzZ" firstAttribute="leading" secondItem="NLJ-bN-JF7" secondAttribute="leading" id="77D-jP-hFO"/>
+                            <constraint firstItem="Pfh-fI-odE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DAe-nG-vle"/>
+                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EH8-pg-Ssg"/>
+                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Hxj-gS-OSn"/>
+                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="leading" secondItem="wIG-2x-NzZ" secondAttribute="leading" id="KhC-ip-rgN"/>
+                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="trailing" secondItem="wIG-2x-NzZ" secondAttribute="trailing" id="M0l-oo-mqj"/>
+                            <constraint firstItem="NLJ-bN-JF7" firstAttribute="centerX" secondItem="Pfh-fI-odE" secondAttribute="centerX" id="Ozt-OS-39Y"/>
+                            <constraint firstItem="Pfh-fI-odE" firstAttribute="top" secondItem="NLJ-bN-JF7" secondAttribute="bottom" constant="42" id="T7N-hI-cz4"/>
+                            <constraint firstItem="NLJ-bN-JF7" firstAttribute="trailing" secondItem="oxL-Y1-eJf" secondAttribute="trailing" id="bvz-lB-3UB"/>
+                            <constraint firstItem="wIG-2x-NzZ" firstAttribute="trailing" secondItem="NLJ-bN-JF7" secondAttribute="trailing" id="euV-3o-iYO"/>
+                            <constraint firstItem="Pfh-fI-odE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gVQ-XC-YBR"/>
+                            <constraint firstItem="Pfh-fI-odE" firstAttribute="baseline" secondItem="oxL-Y1-eJf" secondAttribute="baseline" id="iOo-gD-Idy"/>
+                            <constraint firstItem="wIG-2x-NzZ" firstAttribute="top" secondItem="Z2S-Q4-OhE" secondAttribute="bottom" constant="21" id="pnq-wa-Jb6"/>
+                            <constraint firstItem="Z2S-Q4-OhE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="wwD-WU-rJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037.5999999999999" y="764.16791604197908"/>
+            <point key="canvasLocation" x="1524" y="857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Gky-Ou-vrf">
