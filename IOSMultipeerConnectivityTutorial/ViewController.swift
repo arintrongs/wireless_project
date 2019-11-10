@@ -24,7 +24,34 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     @IBOutlet weak var inputUid: UITextField!
     @IBOutlet weak var inputChatUid: UITextField!
     
+    var username : String = ""
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.messagesBox[self.uid] = []
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showConnectionMenu))
+        
+        print(self.username)
+        self.inputUid.text = self.username
+        
+        self.setupAdhoc()
+    }
+    
+    func setupAdhoc(){
+        //Adhoc part
+        peerID = MCPeerID(displayName: UIDevice.current.name)
+        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
+        mcSession.delegate = self
+        
+    }
+    
+    
     @IBAction func tapSendButton(_ sender: Any) {
+        if inputMessage.text! == "" {
+            return
+        }
+        
         messageToSend = "\(self.uid):\(self.currentChatUID):\(self.ts):\(inputMessage.text!)"
         let message = messageToSend.data(using: String.Encoding.utf8, allowLossyConversion: false)
         
@@ -57,16 +84,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     var messageToSend: String!
     var messagesBox: [String: [Message]] = [:]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.messagesBox[self.uid] = []
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showConnectionMenu))
-        
-        peerID = MCPeerID(displayName: UIDevice.current.name)
-        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
-        mcSession.delegate = self
-        
-    }
+    
     
     @objc func showConnectionMenu() {
         let ac = UIAlertController(title: "Connection Menu", message: nil, preferredStyle: .actionSheet)

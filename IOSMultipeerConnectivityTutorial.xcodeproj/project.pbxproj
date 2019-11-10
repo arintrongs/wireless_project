@@ -12,6 +12,7 @@
 		A4898015228F49E700852716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898013228F49E700852716 /* Main.storyboard */; };
 		A4898017228F49E800852716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4898016228F49E800852716 /* Assets.xcassets */; };
 		A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898018228F49E800852716 /* LaunchScreen.storyboard */; };
+		B4C35C9C2377F20F000951D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C35C9B2377F20F000951D1 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		A4898016228F49E800852716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4898019228F49E800852716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A489801B228F49E800852716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4C35C9A23774AF4000951D1 /* wireless_project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wireless_project.entitlements; sourceTree = "<group>"; };
+		B4C35C9B2377F20F000951D1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B4C35C9E2377FD75000951D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 			children = (
 				A489800E228F49E700852716 /* IOSMultipeerConnectivityTutorial */,
 				A489800D228F49E700852716 /* Products */,
+				B4C35C9D2377FD75000951D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,8 @@
 		A489800E228F49E700852716 /* IOSMultipeerConnectivityTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				B4C35C9B2377F20F000951D1 /* LoginViewController.swift */,
+				B4C35C9A23774AF4000951D1 /* wireless_project.entitlements */,
 				A489800F228F49E700852716 /* AppDelegate.swift */,
 				A4898011228F49E700852716 /* ViewController.swift */,
 				A4898013228F49E700852716 /* Main.storyboard */,
@@ -62,6 +69,14 @@
 				A489801B228F49E800852716 /* Info.plist */,
 			);
 			path = IOSMultipeerConnectivityTutorial;
+			sourceTree = "<group>";
+		};
+		B4C35C9D2377FD75000951D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4C35C9E2377FD75000951D1 /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C35C9C2377F20F000951D1 /* LoginViewController.swift in Sources */,
 				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 			);
@@ -282,16 +298,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IOSMultipeerConnectivityTutorial/wireless_project.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4D8NWK56E9;
+				DEVELOPMENT_TEAM = 26DU7272QB;
 				INFOPLIST_FILE = IOSMultipeerConnectivityTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wireless.project;
+				PRODUCT_BUNDLE_IDENTIFIER = WirelessProject;
 				PRODUCT_NAME = wireless_project;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,16 +319,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = IOSMultipeerConnectivityTutorial/wireless_project.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4D8NWK56E9;
+				DEVELOPMENT_TEAM = 26DU7272QB;
 				INFOPLIST_FILE = IOSMultipeerConnectivityTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wireless.project;
+				PRODUCT_BUNDLE_IDENTIFIER = WirelessProject;
 				PRODUCT_NAME = wireless_project;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
