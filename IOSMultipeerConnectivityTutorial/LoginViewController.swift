@@ -14,25 +14,21 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
+    
+    @IBOutlet weak var wannaChatWIthLabel: UILabel!
+    @IBOutlet weak var chatWithField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
 
     @IBAction func doLogin(_ sender: Any) {
         self.username = self.usernameField.text!;
+        UserDefaults.standard.set(self.username, forKey: "username")
         print(self.username)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is ViewController
-        {
-            let vc = segue.destination as? ViewController
-            vc?.username = self.username
-        }
-    }
+   
 
 }

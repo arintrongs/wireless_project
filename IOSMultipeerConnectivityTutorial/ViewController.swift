@@ -17,8 +17,10 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     @IBOutlet weak var inputChatUid: UITextField!
     
     var username : String = ""
+    var chatWith : String = ""
     var tmp : Int = 0
     
+    var isConnected = false
     
     var ts: Int64 = 0
     var peerID: MCPeerID!
@@ -50,9 +52,18 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     }
     
     func setupChat(){
+        //set username
+        self.username = UserDefaults.standard.string(forKey: "username") ?? ""
+        print(self.username)
+        
+        //assign to adhoc uid
         self.inputUid.text = self.username
+        self.inputChatUid.text = self.chatWith
+        
         print("last chat", self.loadChat())
-        updateTextView()
+        
+        ts = max(self.messagesBox.getTimeStamp(from: self.username, to: self.chatWith), self.messagesBox.getTimeStamp(from: self.chatWith, to: self.username))
+        
     }
    
     func setupAdhoc(){
@@ -80,15 +91,19 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             return
         }
         
-        self.chatView.text = self.chatView.text + self.inputMessage.text! + "\n"
+        if self.isConnected == false {
+            print("Please connect to peer")
+            return
+        }
         
+        self.chatView.text = self.chatView.text + self.inputMessage.text! + "\n"
        
         // Setup UID
         self.uid = inputUid.text!
         self.currentChatUID = inputChatUid.text!
         print(self.uid, self.currentChatUID)
         
-        self.testSendMsg()
+//        self.testSendMsg()
         
         
         messageToSend = "\(self.uid):\(self.currentChatUID):\(self.ts):\(inputMessage.text!)"
@@ -109,8 +124,6 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             print("Error sending message")
         }
     }
-    
-    
     
     
     @objc func showConnectionMenu() {
@@ -141,11 +154,13 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
         case .connected:
+            self.isConnected = true
             self.syncMessages()
             print("Connected: \(peerID.displayName)")
         case .connecting:
             print("Connecting: \(peerID.displayName)")
         case .notConnected:
+            self.isConnected = false
             print("Not Connected: \(peerID.displayName)")
         @unknown default:
             print("fatal error")
@@ -158,7 +173,6 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
             let message = NSString(data: data as Data, encoding: String.Encoding.utf8.rawValue)! as String
             
             self.onMessageReceived(data: message)
-            
             
             self.updateTextView()
         }
@@ -192,11 +206,12 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         for message:Message in messages {
             if (message.sender == self.uid && message.receiver == self.currentChatUID) || (message.sender == self.currentChatUID && message.receiver == self.uid){
-                text += "\(message.sender) : \(message.data)\n"
+                text += "\(message.sender)  w: \(message.data)\n"
             }
         }
         
         self.chatView.text = text
+    
         
     }
     
@@ -209,7 +224,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
                     try self.mcSession.send(encoded!, toPeers: self.mcSession.connectedPeers, with: .unreliable)
                 }
                 catch {
-                    print("Error sending message")
+                    print("Error Syncing message")
                 }
             }
         }
@@ -232,6 +247,9 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         
         var check = true
         
+        if self.messagesBox.box[receiver] == nil{
+            self.messagesBox.box[receiver] = []
+        }
         for message in self.messagesBox.box[receiver]!{
             if message.data == newMessage.data && message.timestamp == newMessage.timestamp {
                 check = false
@@ -240,6 +258,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         if check{
             self.messagesBox.appendMsg(idx: receiver, data: newMessage)
         }
+        
+        self.updateTextView()
     }
     
     
@@ -247,17 +267,8 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
     
     func saveChat() {
         print("save msg")
-//        var msgBox : NSDictionary = messagesBox as NSDictionary
-//        UserDefaults.standard.set(msgBox, forKey: "messageBox")
-        
-        let dictionary = self.messagesBox.getReadyToSave() //getready to sent.
-
         // Save to User Defaults
-        UserDefaults.standard.set(dictionary, forKey: "msg")
-
-        // Read from User Defaults
-        _ = UserDefaults.standard.value(forKey: "msg") as? [String: [String]]
-        
+        UserDefaults.standard.set(self.messagesBox.getReadyToSave(), forKey: "msg")
     }
 
     
@@ -270,6 +281,7 @@ class ViewController: UIViewController, MCSessionDelegate, MCBrowserViewControll
         else{
             self.messagesBox = MessageBox()
         }
+        self.updateTextView()
         return self.messagesBox.box.count
     }
 }

@@ -37,6 +37,8 @@ class Message {
         out += self.data
         return out
     }
+    
+    
 }
 
 class MessageBox{
@@ -69,5 +71,18 @@ class MessageBox{
                 self.appendMsg(idx: k, data: Message(code : msg))
             }
         }
+    }
+    
+    func getTimeStamp(from : String, to :String) -> Int64 {
+        var max:Int64 = 0
+        let all = (self.box[from] ?? []) + (self.box[to] ?? [])
+        for msg in all {
+            if msg.sender == from && msg.receiver == to{
+                if msg.timestamp > max {
+                    max = msg.timestamp
+                }
+            }
+        }
+        return max
     }
 }
