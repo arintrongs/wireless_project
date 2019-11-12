@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FA9251F000400D91547A493 /* Pods_IOSMultipeerConnectivityTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4350F2BC749375688C848CF4 /* Pods_IOSMultipeerConnectivityTutorial.framework */; };
+		6CCA1A4D237A8DFC006661CA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCA1A4C237A8DFC006661CA /* ChatViewController.swift */; };
+		6CCA1A4F237A918B006661CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCA1A4E237A918B006661CA /* User.swift */; };
+		6CCA1A51237A9829006661CA /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCA1A50237A9829006661CA /* Emoji.swift */; };
 		A4898010228F49E700852716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489800F228F49E700852716 /* AppDelegate.swift */; };
-		A4898012228F49E700852716 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4898011228F49E700852716 /* ViewController.swift */; };
 		A4898015228F49E700852716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898013228F49E700852716 /* Main.storyboard */; };
 		A4898017228F49E800852716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4898016228F49E800852716 /* Assets.xcassets */; };
 		A489801A228F49E800852716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4898018228F49E800852716 /* LaunchScreen.storyboard */; };
@@ -20,9 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4350F2BC749375688C848CF4 /* Pods_IOSMultipeerConnectivityTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSMultipeerConnectivityTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60EBEC5E1A7987EF6E8FF878 /* Pods-IOSMultipeerConnectivityTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSMultipeerConnectivityTutorial.debug.xcconfig"; path = "Target Support Files/Pods-IOSMultipeerConnectivityTutorial/Pods-IOSMultipeerConnectivityTutorial.debug.xcconfig"; sourceTree = "<group>"; };
+		6CCA1A4C237A8DFC006661CA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		6CCA1A4E237A918B006661CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6CCA1A50237A9829006661CA /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		89B9F5A649B9DDA7313EAF27 /* Pods-IOSMultipeerConnectivityTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSMultipeerConnectivityTutorial.release.xcconfig"; path = "Target Support Files/Pods-IOSMultipeerConnectivityTutorial/Pods-IOSMultipeerConnectivityTutorial.release.xcconfig"; sourceTree = "<group>"; };
 		A489800C228F49E700852716 /* wireless_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wireless_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A489800F228F49E700852716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4898011228F49E700852716 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4898014228F49E700852716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4898016228F49E800852716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4898019228F49E800852716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA9251F000400D91547A493 /* Pods_IOSMultipeerConnectivityTutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +62,7 @@
 				A489800E228F49E700852716 /* IOSMultipeerConnectivityTutorial */,
 				A489800D228F49E700852716 /* Products */,
 				B4C35C9D2377FD75000951D1 /* Frameworks */,
+				BBB490935B3BEDC3C2E9B93C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,18 +77,20 @@
 		A489800E228F49E700852716 /* IOSMultipeerConnectivityTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				B4C35C9B2377F20F000951D1 /* LoginViewController.swift */,
-				B4C35C9A23774AF4000951D1 /* wireless_project.entitlements */,
-				A489800F228F49E700852716 /* AppDelegate.swift */,
-				A4898011228F49E700852716 /* ViewController.swift */,
-				B4CB2AC12378289700FF543B /* Message.swift */,
-				B48C33A123793625008B33FD /* Friend.swift */,
-				A4898013228F49E700852716 /* Main.storyboard */,
 				B48C33A323793FA9008B33FD /* AddFriendViewController.swift */,
-				B48C339F23793491008B33FD /* FriendsViewController.swift */,
+				A489800F228F49E700852716 /* AppDelegate.swift */,
 				A4898016228F49E800852716 /* Assets.xcassets */,
-				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
+				6CCA1A4C237A8DFC006661CA /* ChatViewController.swift */,
+				6CCA1A50237A9829006661CA /* Emoji.swift */,
+				B48C33A123793625008B33FD /* Friend.swift */,
+				B48C339F23793491008B33FD /* FriendsViewController.swift */,
 				A489801B228F49E800852716 /* Info.plist */,
+				A4898018228F49E800852716 /* LaunchScreen.storyboard */,
+				B4C35C9B2377F20F000951D1 /* LoginViewController.swift */,
+				A4898013228F49E700852716 /* Main.storyboard */,
+				B4CB2AC12378289700FF543B /* Message.swift */,
+				6CCA1A4E237A918B006661CA /* User.swift */,
+				B4C35C9A23774AF4000951D1 /* wireless_project.entitlements */,
 			);
 			path = IOSMultipeerConnectivityTutorial;
 			sourceTree = "<group>";
@@ -87,8 +99,18 @@
 			isa = PBXGroup;
 			children = (
 				B4C35C9E2377FD75000951D1 /* UIKit.framework */,
+				4350F2BC749375688C848CF4 /* Pods_IOSMultipeerConnectivityTutorial.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBB490935B3BEDC3C2E9B93C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60EBEC5E1A7987EF6E8FF878 /* Pods-IOSMultipeerConnectivityTutorial.debug.xcconfig */,
+				89B9F5A649B9DDA7313EAF27 /* Pods-IOSMultipeerConnectivityTutorial.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A489801E228F49E800852716 /* Build configuration list for PBXNativeTarget "IOSMultipeerConnectivityTutorial" */;
 			buildPhases = (
+				C545CFB43011F93F06D4CE48 /* [CP] Check Pods Manifest.lock */,
 				A4898008228F49E700852716 /* Sources */,
 				A4898009228F49E700852716 /* Frameworks */,
 				A489800A228F49E700852716 /* Resources */,
+				9184B9FD87BCADA53AEA26AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,17 +181,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9184B9FD87BCADA53AEA26AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSMultipeerConnectivityTutorial/Pods-IOSMultipeerConnectivityTutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSMultipeerConnectivityTutorial/Pods-IOSMultipeerConnectivityTutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IOSMultipeerConnectivityTutorial/Pods-IOSMultipeerConnectivityTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C545CFB43011F93F06D4CE48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOSMultipeerConnectivityTutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4898008228F49E700852716 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCA1A51237A9829006661CA /* Emoji.swift in Sources */,
 				B4C35C9C2377F20F000951D1 /* LoginViewController.swift in Sources */,
 				B48C33A423793FA9008B33FD /* AddFriendViewController.swift in Sources */,
+				6CCA1A4D237A8DFC006661CA /* ChatViewController.swift in Sources */,
 				B48C33A023793491008B33FD /* FriendsViewController.swift in Sources */,
 				B4CB2AC22378289700FF543B /* Message.swift in Sources */,
+				6CCA1A4F237A918B006661CA /* User.swift in Sources */,
 				B48C33A223793625008B33FD /* Friend.swift in Sources */,
-				A4898012228F49E700852716 /* ViewController.swift in Sources */,
 				A4898010228F49E700852716 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,12 +380,13 @@
 		};
 		A489801F228F49E800852716 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60EBEC5E1A7987EF6E8FF878 /* Pods-IOSMultipeerConnectivityTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IOSMultipeerConnectivityTutorial/wireless_project.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 26DU7272QB;
+				DEVELOPMENT_TEAM = 4D8NWK56E9;
 				INFOPLIST_FILE = IOSMultipeerConnectivityTutorial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = WirelessProject;
+				PRODUCT_BUNDLE_IDENTIFIER = IOSMultipeerConnectivityTutorial;
 				PRODUCT_NAME = wireless_project;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,12 +403,13 @@
 		};
 		A4898020228F49E800852716 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B9F5A649B9DDA7313EAF27 /* Pods-IOSMultipeerConnectivityTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = IOSMultipeerConnectivityTutorial/wireless_project.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 26DU7272QB;
+				DEVELOPMENT_TEAM = 4D8NWK56E9;
 				INFOPLIST_FILE = IOSMultipeerConnectivityTutorial/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -347,7 +417,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = WirelessProject;
+				PRODUCT_BUNDLE_IDENTIFIER = IOSMultipeerConnectivityTutorial;
 				PRODUCT_NAME = wireless_project;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

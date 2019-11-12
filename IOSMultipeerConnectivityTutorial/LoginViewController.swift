@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     public var username :String = ""
+    
      @IBOutlet weak var userNameLabel: UILabel!
     
     @IBOutlet weak var usernameField: UITextField!
@@ -27,6 +28,7 @@ class LoginViewController: UIViewController {
         self.username = self.usernameField.text!;
         UserDefaults.standard.set(self.username, forKey: "username")
         print(self.username)
+        
     }
     
    

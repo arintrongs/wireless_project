@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import SwiftyRSA
 
 class Message {
+    var id : Int64
     var sender : String
     var receiver : String
     var timestamp : Int64
@@ -16,13 +18,15 @@ class Message {
     
     init(code : String){
         let messageArr = code.components(separatedBy: "$")
-        self.sender = messageArr[0]
-        self.receiver = messageArr[1]
-        self.timestamp = Int64(messageArr[2])!
-        self.data = messageArr[3]
+        self.id = Int64(messageArr[0])!
+        self.sender = messageArr[1]
+        self.receiver = messageArr[2]
+        self.timestamp = Int64(messageArr[3])!
+        self.data = messageArr[4]
     }
     
-    init (sender: String, receiver: String,  timestamp: Int64, data: String){
+    init (id: Int64, sender: String, receiver: String,  timestamp: Int64, data: String){
+        self.id = id
         self.sender = sender
         self.receiver = receiver
         self.timestamp = timestamp
@@ -31,6 +35,7 @@ class Message {
     
     func getString() -> String{
         var out : String = ""
+        out += String(self.id)+"$"
         out += self.sender+"$"
         out += self.receiver+"$"
         out += String(self.timestamp)+"$"
@@ -43,6 +48,9 @@ class Message {
 
 class MessageBox{
     var box : [String: [Message]] = [:]
+    var id : Int64!
+    var public_keys : [String: String] = [:]
+    var private_key : String!
     
     func appendMsg(idx : String, data : Message) {
         if self.box[idx] == nil{
@@ -85,4 +93,18 @@ class MessageBox{
         }
         return max
     }
+    
+    func getId() -> Int64 {
+        if self.id == nil {
+            self.id = Int64(UserDefaults.standard.string(forKey: "message_id") ?? "0")
+        }
+        return self.id
+    }
+    
+    func incId()->Void {
+        self.id += 1
+        
+    }
+    
+    
 }

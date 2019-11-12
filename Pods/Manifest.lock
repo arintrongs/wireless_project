@@ -1,0 +1,30 @@
+PODS:
+  - MessengerKit (1.0.4)
+  - SwiftyRSA (1.5.0):
+    - SwiftyRSA/ObjC (= 1.5.0)
+  - SwiftyRSA/ObjC (1.5.0)
+
+DEPENDENCIES:
+  - MessengerKit (from `https://github.com/steve228uk/MessengerKit.git`)
+  - SwiftyRSA
+
+SPEC REPOS:
+  trunk:
+    - SwiftyRSA
+
+EXTERNAL SOURCES:
+  MessengerKit:
+    :git: https://github.com/steve228uk/MessengerKit.git
+
+CHECKOUT OPTIONS:
+  MessengerKit:
+    :commit: 060d6026aa959391501a768eef960a2d22502992
+    :git: https://github.com/steve228uk/MessengerKit.git
+
+SPEC CHECKSUMS:
+  MessengerKit: 41a5742a03e3f9638cb3b4ae310f69161ac1e659
+  SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
+
+PODFILE CHECKSUM: f4e7932804c766672ea2af9f02333d0837bfdd0b
+
+COCOAPODS: 1.8.4

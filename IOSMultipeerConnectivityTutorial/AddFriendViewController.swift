@@ -10,11 +10,20 @@ import UIKit
 
 class AddFriendViewController: UIViewController {
 
+    public var delegate : FriendsViewDelegate?
+    
+    @IBOutlet weak var friendUsername: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func onTapAddButton(_ sender: Any) {
+        self.delegate?.addFriend(value: friendUsername.text!)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 
     /*
@@ -27,4 +36,8 @@ class AddFriendViewController: UIViewController {
     }
     */
 
+}
+
+protocol FriendsViewDelegate {
+  func addFriend(value: String)
 }
