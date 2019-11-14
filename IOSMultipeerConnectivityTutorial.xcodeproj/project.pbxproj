@@ -29,7 +29,7 @@
 		6CCA1A4E237A918B006661CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6CCA1A50237A9829006661CA /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		89B9F5A649B9DDA7313EAF27 /* Pods-IOSMultipeerConnectivityTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSMultipeerConnectivityTutorial.release.xcconfig"; path = "Target Support Files/Pods-IOSMultipeerConnectivityTutorial/Pods-IOSMultipeerConnectivityTutorial.release.xcconfig"; sourceTree = "<group>"; };
-		A489800C228F49E700852716 /* wireless_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wireless_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A489800C228F49E700852716 /* ChatHoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatHoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A489800F228F49E700852716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4898014228F49E700852716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4898016228F49E800852716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		A489800D228F49E700852716 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A489800C228F49E700852716 /* wireless_project.app */,
+				A489800C228F49E700852716 /* ChatHoc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 			);
 			name = IOSMultipeerConnectivityTutorial;
 			productName = IOSMultipeerConnectivityTutorial;
-			productReference = A489800C228F49E700852716 /* wireless_project.app */;
+			productReference = A489800C228F49E700852716 /* ChatHoc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -395,7 +395,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = IOSMultipeerConnectivityTutorial;
-				PRODUCT_NAME = wireless_project;
+				PRODUCT_NAME = ChatHoc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -418,7 +418,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = IOSMultipeerConnectivityTutorial;
-				PRODUCT_NAME = wireless_project;
+				PRODUCT_NAME = ChatHoc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

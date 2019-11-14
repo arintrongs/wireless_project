@@ -145,7 +145,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend's Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYl-7X-xmc">
-                                <rect key="frame" x="114" y="183" width="144" height="21"/>
+                                <rect key="frame" x="135" y="188" width="144" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -153,14 +153,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="top" secondItem="yYl-7X-xmc" secondAttribute="bottom" constant="17" id="0B0-En-E7T"/>
-                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="trailing" secondItem="SBg-nl-ho8" secondAttribute="trailing" id="MxL-MD-JV4"/>
-                            <constraint firstItem="SBg-nl-ho8" firstAttribute="top" secondItem="SCP-Xh-uHT" secondAttribute="bottom" constant="19" id="Np6-xI-CdZ"/>
-                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="centerX" secondItem="upf-vy-BTH" secondAttribute="centerX" id="RlR-sE-sNm"/>
-                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="leading" secondItem="K9C-Tf-TSO" secondAttribute="leading" constant="30" id="iZa-36-ylk"/>
-                            <constraint firstItem="yYl-7X-xmc" firstAttribute="top" secondItem="K9C-Tf-TSO" secondAttribute="top" constant="95" id="pZC-tb-dsj"/>
-                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="leading" secondItem="SBg-nl-ho8" secondAttribute="leading" id="qPs-XO-KHa"/>
-                            <constraint firstItem="yYl-7X-xmc" firstAttribute="leading" secondItem="K9C-Tf-TSO" secondAttribute="leading" constant="114" id="vqx-Mf-O49"/>
+                            <constraint firstItem="yYl-7X-xmc" firstAttribute="top" secondItem="K9C-Tf-TSO" secondAttribute="top" constant="100" id="AK4-gh-FjF"/>
+                            <constraint firstItem="yYl-7X-xmc" firstAttribute="centerX" secondItem="SCP-Xh-uHT" secondAttribute="centerX" id="Bkr-yY-Whg"/>
+                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="leading" secondItem="K9C-Tf-TSO" secondAttribute="leading" constant="30" id="QEL-v9-H1X"/>
+                            <constraint firstItem="yYl-7X-xmc" firstAttribute="centerX" secondItem="upf-vy-BTH" secondAttribute="centerX" id="QgR-gA-kee"/>
+                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="trailing" secondItem="SBg-nl-ho8" secondAttribute="trailing" id="ZOj-nq-me1"/>
+                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="top" secondItem="yYl-7X-xmc" secondAttribute="bottom" constant="12" id="cYL-0s-gJj"/>
+                            <constraint firstItem="SBg-nl-ho8" firstAttribute="top" secondItem="SCP-Xh-uHT" secondAttribute="bottom" constant="19" id="gH9-ky-Gxe"/>
+                            <constraint firstItem="SCP-Xh-uHT" firstAttribute="leading" secondItem="SBg-nl-ho8" secondAttribute="leading" id="ocG-sR-6aV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K9C-Tf-TSO"/>
                     </view>
